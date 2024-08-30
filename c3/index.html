@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Mega Menu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+	<!-- header start -->
+	<header class="header" id="header">
+		<div class="container">
+			<div class="row v-center">
+				<div class="header-item item-left">
+					<div class="logo">
+						<a href="#" id="log">
+							<svg id="anchor" width="175" height="63" viewBox="0 0 175 63" fill="none"
+								xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<rect width="175" height="63" fill="url(#pattern0_625932_1086)" />
+								<defs>
+									<pattern id="pattern0_625932_1086" patternContentUnits="objectBoundingBox" width="1"
+										height="1">
+										<use xlink:href="#image0_625932_1086"
+											transform="matrix(0.00165899 0 0 0.00460829 -0.00847926 0)" />
+									</pattern>
+									<image id="image0_625932_1086" width="613" height="217"
+										xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAmUAAADZCAQAAADLEY+LAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAD/h4/MvwAAAAd0SU1FB+gHBAIfDiLnj/8AABt1SURBVHja7d17oFZT/sfx94pSFCZJN8MoRomYZkQJo0YxIdNUQgy/H8K4jcsIqVwzDH7M6Fcov5/JPU2lEjEhk0v3pn4p5RJOGdFFlOqs3x8Vp3Oevfbez9772ft5zud1/pjR2s/aaz3nOd9n77XX+i4QERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERCcfk9zK7koZpNz3z5pk2aTdBpLqokXYDRESiUygTkRKgUCYiJUChTERKgEKZiJQAhTIRKQEKZSJSAhTKRKQEKJSJSAlQKBOREqBQJiIlQKFMREpAtQ5ln3NV2k0QkVhU21C2mgE05/60myEisdg57QakYT0Pcjdfpt0MEYlNtQtlGxnOHaxIuxkiEqtqFco28ziD+SjtZohI7KpNKLM8y0AWpd0MEUlENQllE7mJ2Wk3QkQSUw1C2WvcyJtpN0JEElXikzHepQvHK5CJlLwSvipbwM2MwabdjGrGNqApu/Mly83atNsi6bKNaMxurOJjsz7ttng3cqXNtKW2r93JEuAnQXPT/i0V+DNRz/a38235tt5vttNtP7tL2q2SNNi97G32ve//Er6zr9m+NpuXTVkOZZ/YfrZmoDCmUBbjJ6KjLcvxHiy2h6bdMik0281+leOzMMsekORZS2xL3y+4i7/ybZieJNeYotvS1zb2/DxsMM7FEfYYppD7Cmwt7c2CtHsmhWNPZYzHGPwK2pmP025f5eZm8KpsjR1odw98Naarshy/1dWefRnjfN1u9lPH+7Awo7cWkgDb0K5xfBZeT+7MJfIE81vu5gAGo5HmVFxIE0dpS/qk3UApmD+wu6O0oz0xqROXwPfldzzKbXyWdjNiYDuwT0FOtMa8Emt9PXzKf8vjBemXpM//s/BSMicu8lC2hVEMZlnazYjLTXQtyHnmcnis9fnVFu/ZJLNsXVr4HHJEUucu4lBmeZ6bWZh2M6o9uwu7+RyyV9ptlAKpH8MReSra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" />
+								</defs>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<!-- menu start here -->
+				<div class="header-item item-center">
+					<div class="menu-overlay">
+					</div>
+					<nav class="menu">
+						<div class="mobile-menu-head">
+							<div class="go-back"><i class="fa fa-angle-left"></i></div>
+							<div class="current-menu-title"></div>
+							<div class="mobile-menu-close">&times;</div>
+						</div>
+						<ul class="menu-main">
+							<li>
+								<!-- <a href="#">AI Software</a> -->
+							</li>
+							<li class="menu-item-has-children">
+								<a href="#" class="tex t1">AI Software </i></a>
+								<div class="sub-menu mega-menu mega-menu-column-4" style="padding:20px;">
+									<div class="list-item text-start">
+										<a href="#">
+											<img src="img/p1.jpg" alt="new Product">
+											<h4 class="title">C3 AI Application</h4>
+											<div class="title">
+												<p>Enterpise Ai application for higher value use cases</p>
+											</div>
+										</a>
+									</div>
+									<div class="list-item text-start">
+										<a href="#">
+											<img src="img/p1.jpg" alt="new Product">
+											<h4 class="title">C3 AI Platform</h4>
+											<div class="title">
+												<p>Enterpise Ai application Developemnt Platform</p>
+											</div>
+										</a>
+									</div>
+									<div class="list-item text-start">
+										<a href="#">
+											<img src="img/p1.jpg" alt="new Product">
+											<h4 class="title">C3 Generative AI</h4>
+											<div class="title">
+												<p>Unified Knowledge Source for the Enterpise</p>
+											</div>
+										</a>
+									</div>
+									<div class="list-item  getstart">
+										<a href="#">
+											<h2 style="color: black;">Get Started With a C3 AI Pilot</h2>
+											<h4 class="title">C3 Generative AI</h4>
+											<div class="title">
+												<p>Implement a C3 AI Application with just six months</p>
+												<p>Learn more</p>
+											</div>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="menu-item-has-children">
+								<a href="#" class="tex t2">Industries </i></a>
+								<div class="sub-menu mega-menu mega-menu-column-4">
+									<div class="list-item text-start">
+										<a href="#">
+											<img src="https://www.ucl.ac.uk/bartlett/architecture/sites/bartlett_architecture/files/styles/owl_carousel/public/ptp_2_8x5.jpg?itok=TzFBNErL"
+												alt="new Product">
+											<h4 class="title">Manufacture</h4>
+										</a>
+									</div>
+									<div class="list-item text-start">
+										<a href="#">
+											<img src="https://comet-integrated.com/wp-content/uploads/2020/09/oil-and-gas-industry-min.jpg"
+												alt="new Product">
+											<h4 class="title">Oil & Gas</h4>
+										</a>
+									</div>
+									<div class="list-item text-start">
+										<a href="#">
+											<img src="https://ik.imagekit.io/clouglobal/img/wp-content/uploads/2023/06/Utilities-and-power-companies-must-embrace-multiple-energy-efficiency-strategies-to-minimize-waste-optimize-resource-usage-and-reduce-operating-costs-symbol-image-credit-CLOU.jpg"
+												alt="new Product">
+											<h4 class="title">utilities</h4>
+										</a>
+									</div>
+									<div class="list-item text-start">
+										<a href="#">
+											<img src="https://thedailyguardian.com/wp-content/uploads/2023/04/TAKE-5-12.jpg"
+												alt="new Product">
+											<h4 class="title">financial services</h4>
+										</a>
+									</div>
+									<div class="list-item text-start">
+										<a href="#">
+											<img src="https://ambulancenearme.in/wp-content/uploads/2023/08/government.jpg"
+												alt="new Product">
+											<h4 class="title">government</h4>
+										</a>
+									</div>
+									<div class="list-item text-start">
+										<a href="#">
+											<img src="https://plus.unsplash.com/premium_photo-1673953509975-576678fa6710?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVhbHRoY2FyZXxlbnwwfHwwfHx8MA%3D%3D"
+												alt="new Product">
+											<h4 class="title">Health Care</h4>
+										</a>
+									</div>
+									<div class="list-item text-start">
+										<a href="#">
+											<img src="https://media.cnn.com/api/v1/images/stellar/prod/221209144249-in-store-retail-shopping.jpg?c=original"
+												alt="new Product">
+											<h4 class="title">Retail</h4>
+										</a>
+									</div>
+									<div class="list-item text-center">
+										<a href="#">
+											<img src="https://www.solutions.kompass.com/blog/media/Blog_Telecom.png"
+												alt="new Product">
+											<h4 class="title">Telecommunications</h4>
+										</a>
+									</div>
+									<div class="list-item text-start">
+										<a href="#">
+											<img src="https://geospatialmedia.s3.amazonaws.com/wp-content/uploads/2019/04/1555340542-1024x683.jpg"
+												alt="new Product">
+											<h4 class="title">transportation</h4>
+										</a>
+									</div>
+								</div>
+
+							</li>
+							<li class="menu-item-has-children">
+								<a href="#" class="tex t3">Customers </i></a>
+								<div class="sub-menu mega-menu mega-menu-column-4">
+									<div class="list-item">
+										<div class="list-item text-start">
+											<a href="#">
+												<h4 class="title">transportation</h4>
+											</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="menu-item-has-children ">
+								<a href="#" class="tex t4">Resources </i></a>
+								<div class="sub-menu mega-menu mega-menu-column-4" style="margin-bottom: 40px; ">
+									<div class="list-item">
+										<h4 class="title">Generative AI</h4>
+										<div class="list-item text-start">
+											<a href="#">
+												<p class="title" style="font-size: 13px;">Generative Ai and the Future
+													of Business</p>
+											</a>
+
+										</div>
+									</div>
+									<hr />
+									<div class="list-item" style="margin-bottom: 40px;">
+										<h4 class="title">What is Enterpise Ai</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">Core Principle and best
+													Pratcites of Enterpise Ai</p>
+											</a>
+										</div>
+									</div>
+									<hr />
+									<div class="list-item" style="margin-bottom: 40px;">
+										<h4 class="title">Machine Learning</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">Core principal and how-to
+													guide on Machine Learning
+												</p>
+											</a>
+										</div>
+									</div>
+									<hr />
+									<div class="list-item" style="margin-bottom: 40px;">
+										<h4 class="title">C3 Ai live</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">Series of livestream events
+													featuring C3 Ai Customers
+												</p>
+											</a>
+										</div>
+									</div>
+									<hr />
+									<div class="list-item" style="margin-bottom: 40px;">
+										<h4 class="title">Developer Portal</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">Review details technical
+													document and traning
+												</p>
+											</a>
+										</div>
+									</div>
+									<hr />
+									<div class="list-item" style="margin-bottom: 40px;">
+										<h4 class="title">Publications</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">Throuht LeaderShip content and
+													Product Data Sheets
+												</p>
+											</a>
+										</div>
+									</div>
+									<hr />
+									<div class="list-item" style="margin-bottom: 40px;">
+										<h4 class="title">Customer ViewPoint</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">Videos of Customers sharing
+													their experience of Enterpise AI
+												</p>
+											</a>
+										</div>
+									</div>
+									<hr />
+									<div class="list-item" style="margin-bottom: 40px;">
+										<h4 class="title">Blogs</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">insightes and perspectives for
+													C3 AI thought leaders
+												</p>
+											</a>
+										</div>
+									</div>
+									<hr />
+									<div class="list-item" style="margin-bottom: 40px;">
+										<h4 class="title">Glossary</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">Defination of Enterprise Ai
+													and Data Science terms
+												</p>
+											</a>
+										</div>
+									</div>
+									<hr />
+								</div>
+							</li>
+							<li class="menu-item-has-children ">
+								<a href="#" class="tex t5">News </i></a>
+								<div class="sub-menu mega-menu mega-menu-column-4" style="margin-bottom: 40px;">
+									<div class="list-item">
+										<h4 class="title"></h4>
+										<div class="list-item text-start">
+											<a href="#">
+												<p class="title" style="font-size: 13px;"> links</p>
+											</a>
+
+										</div>
+									</div>
+									<hr />
+								</div>
+							</li>
+							<li class="menu-item-has-children ">
+								<a href="#" class="tex t6">Company </i></a>
+								<div class="sub-menu mega-menu mega-menu-column-4" style="margin-bottom: 40px;">
+									<div class="list-item">
+										<h4 class="title">Company</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">Leading Provider of enterpise
+													Ai Software</p>
+											</a>
+										</div>
+									</div>
+									<div class="list-item" style="margin-bottom: 40px;">
+										<h4 class="title">Partners</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">Driving Customer Sucess with
+													industry alliances
+												</p>
+											</a>
+										</div>
+									</div>
+
+									<div class="list-item" style="margin-bottom: 40px;">
+										<h4 class="title">Investors</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">Building a world-class
+													Software Company
+												</p>
+											</a>
+										</div>
+									</div>
+
+									<div class="list-item" style="margin-bottom: 40px;">
+										<h4 class="title">Careers</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">Endless inspiration and
+													meaningful work
+												</p>
+											</a>
+										</div>
+									</div>
+
+									<div class="list-item" style="margin-bottom: 40px;">
+										<h4 class="title">LeaderShip</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">Industry-leading experience
+												</p>
+											</a>
+										</div>
+									</div>
+
+									<div class="list-item" style="margin-bottom: 40px;">
+										<h4 class="title">C3 AI DTI</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">Research consortium dedicated
+													to accelerating the benefites of artificial intelligence
+												</p>
+											</a>
+										</div>
+									</div>
+
+									<div class="list-item" style="margin-bottom: 40px;">
+										<h4 class="title">Events</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">Annual user conference,C3
+													Transform,and participation in industry conferences
+												</p>
+											</a>
+										</div>
+									</div>
+
+									<div class="list-item" style="margin-bottom: 40px;">
+										<h4 class="title">C3 AI Fellows</h4>
+										<div class="list-item text-start">
+											<a href="#">
+
+												<p class="title" style="font-size: 13px;">Supporting the Makers of
+													tommrow
+												</p>
+											</a>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<!-- menu end here -->
+				<div class="header-item item-right">
+					<a href="search.html"><i class="fas fa-search" id="search"></i></a>
+
+					<a href="#" class="btn" id="contact">Contact</a>
+
+
+					<!-- mobile menu trigger -->
+					<div class="mobile-menu-trigger">
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- header end -->
+
+	<!-- banner start -->
+	<section class="banner-section">
+		<h1 style="font-size: 50px;">Revolutionizing Enterprise AI.</h1>
+		<p>Discover a wealth of information,resources, and the latest updates curated just for you.Dive into our
+			extensive collection of papers,presentations, and news articles to stay informed and ahead.</p>
+		<h1 class="banner-head">Explore Our Enterprise AI Solutions Today.</h1>
+	</section>
+	<!-- banner end -->
+
+	<div class="main-cont">
+		<h1 style="color: white;text-align: center;">Flivo AI Applications</h1>
+		<!-- card section starts here -->
+		<div class="all-cards">
+			<div class="frist-card">
+				<img class="image" src="https://kishore2.flivo.ai/wp-content/uploads/2024/04/6.png" alt="" />
+				<div>
+					<img class="iconimage" src="https://kishore2.flivo.ai/wp-content/uploads/2024/04/Equinor.svg.png"
+						alt="" />
+					<h1 class="text">PLD Space Spars with AI:Unlocking New Frontiers in Aerospace Technology.</h1>
+				</div>
+				<div class="last-icon">
+					<p>Customer Video</p>
+					<p>Case Study</p>
+				</div>
+			</div>
+			<div class="frist-card">
+				<img class="image"
+					src="https://kishore2.flivo.ai/wp-content/uploads/2024/04/catagory_satellite_banner-2048x1152.jpeg"
+					alt="" />
+				<div>
+					<img class="iconimage"
+						src="https://kishore2.flivo.ai/wp-content/uploads/2024/04/Galactic_Energy_Logo_2022.png"
+						alt="" />
+					<h1 class="text">Enhancing Manufacturing Efficiency with Flivo AI</h1>
+				</div>
+				<div class="last-icon">
+					<p>Customer Video</p>
+					<p>Case Study</p>
+				</div>
+			</div>
+			<div class="frist-card">
+				<img class="image" src="https://kishore2.flivo.ai/wp-content/uploads/2024/04/2.png" alt="" />
+				<div>
+					<img class="iconimage"
+						src="https://kishore2.flivo.ai/wp-content/uploads/2024/04/Westlake_University.png" alt="" />
+					<h1 class="text">Amplifies Defense Capabilities with Flivo Ai Integration</h1>
+				</div>
+				<div class="last-icon">
+					<p>Customer Video</p>
+					<p>Case Study</p>
+				</div>
+			</div>
+			<div class="frist-card">
+				<img class="image" src="https://kishore2.flivo.ai/wp-content/uploads/2024/04/4.png" alt="" />
+				<div>
+					<img class="iconimage" src="https://kishore2.flivo.ai/wp-content/uploads/2024/04/Aiko-logo.jpeg"
+						alt="" />
+					<h1 class="text">FFilvo AI Enhances Enunoir Engineering's Performance </h1>
+				</div>
+				<div class="last-icon">
+					<p>Customer Video</p>
+					<p>Case Study</p>
+				</div>
+			</div>
+			<div class="frist-card">
+				<img class="image" src="https://kishore2.flivo.ai/wp-content/uploads/2024/04/5.png" alt="" />
+				<div>
+					<img class="iconimage"
+						src="https://kishore2.flivo.ai/wp-content/uploads/2024/04/2560px-MBDA-Logo.svg.png" alt="" />
+					<h1 class="text">Filvo AI Drives Westlake Universities's transformation with Cutting-edge
+						Innovations.</h1>
+				</div>
+				<div class="last-icon">
+					<p>Customer Video</p>
+					<p>Case Study</p>
+				</div>
+			</div>
+			<div class="frist-card">
+				<img class="image" src="https://kishore2.flivo.ai/wp-content/uploads/2024/04/7.png" alt="" />
+				<div>
+					<img class="iconimage" src="https://kishore2.flivo.ai/wp-content/uploads/2024/04/PLD_Logo_black.png"
+						alt="" />
+					<h1 class="text">Enhancing Satellite with Flivo AI</h1>
+				</div>
+				<div class="last-icon">
+					<p>Customer Video</p>
+					<p>Case Study</p>
+				</div>
+			</div>
+		</div>
+		<!-- cards section ends here -->
+
+		<!-- word section starts here -->
+
+		<!-- word section ends here -->
+
+		<!-- three card section starts here -->
+
+
+	</div>
+
+	<div class="world-card">
+		<div class="inside-world">
+			<div>
+				<h1 style="color:white;">World "O" Enterpise AI Summit <br />Dubai 24-Revealing Untapped<br />$30
+					Trillion</h1>
+				<p style="color: #828282;">Welcome to the Enterprise AI Summit Dubai 24! Join us in the vibrant
+					city of Dubai as we delve<br />into the exciting world of AI in manufacturing.<br /> Discover
+					the untapped $30 trillion market waiting to be explored. Network with industry experts, gain
+					valuable insights,<br />and stay ahead of the curve in this rapidly evolving sector. Don’t
+					miss<br />out on this opportunity to be part of a groundbreaking event!</p>
+			</div>
+			<div>
+				<iframe height="280" width="500" src="https://www.youtube.com/embed/il_t1WVLNxk"></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="all-cards-for-3-cards">
+		<div class="frist-card-iframe">
+			<iframe height="380" width="400" src="https://www.youtube.com/embed/lHk7gspkj0I?si=y0Yrv0VPQt8FEpO8"
+				title="The Rise of AI: How Machines Are Learning to Think"></iframe>
+			<div>
+				<img src="https://res.cloudinary.com/dfxkazmkc/image/upload/v1724866223/image_6_1_mgfpry.png" alt="">
+
+				<h1 class="text">Flivo AI Sparks Creative Revolution with Generative AI</h1>
+				<p style="color: #828282; padding-left:10px;">Discover a new era of innovation as Flivo AI pioneers
+					the creative
+					frontier with Generative AI.
+					Experience the power of
+					machine intelligence driving a revolution in design and creativity</p>
+				<p style="color: #828282;padding-left: 10px;margin-top: 20px;">Transform 2024</p>
+			</div>
+
+		</div>
+		<div class="frist-card-iframe">
+			<iframe height="380" width="400" src="https://www.youtube.com/embed/RiTfe-ckD_g?si=wRZ-DRRCp8GLovcp"
+				title="The Rise of AI: How Machines Are Learning to Think"></iframe>
+			<div>
+				<img src="https://res.cloudinary.com/dfxkazmkc/image/upload/v1724866223/image_6_1_mgfpry.png" alt="">
+
+				<h1 class="text">Flivo AI Sparks Creative Revolution with Generative AI</h1>
+				<p style="color: #828282; padding-left:10px;">Discover a new era of innovation as Flivo AI pioneers
+					the creative
+					frontier with Generative AI.
+					Experience the power of
+					machine intelligence driving a revolution in design and creativity</p>
+				<p style="color: #828282;padding-left: 10px;margin-top: 20px;">Transform 2024</p>
+			</div>
+
+
+		</div>
+		<div class="frist-card-iframe">
+			<iframe height="380" width="400" src="https://www.youtube.com/embed/azXBjyE9dOI?si=gwtkC0PEsPCz5SPo"
+				title="The Rise of AI: How Machines Are Learning to Think"></iframe>
+			<div>
+				<img src="https://res.cloudinary.com/dfxkazmkc/image/upload/v1724866223/image_6_1_mgfpry.png" alt="">
+
+				<h1 class="text">Flivo AI Sparks Creative Revolution with Generative AI</h1>
+				<p style="color: #828282; padding-left:10px;">Discover a new era of innovation as Flivo AI pioneers
+					the creative
+					frontier with Generative AI.
+					Experience the power of
+					machine intelligence driving a revolution in design and creativity</p>
+				<p style="color: #828282;padding-left: 10px;margin-top: 20px;">Transform 2024</p>
+			</div>
+
+		</div>
+		<!-- three card section ends here -->
+		<!-- single border text section -->
+		<div style="margin-top: 100px;">
+			<div>
+				<h1 class="learn">Learn More about Flivo transform 2024
+				</h1>
+			</div>
+		</div>
+		<!-- single border text  ends here -->
+
+	</div>
+	<!-- Flivo Ai studio start here -->
+	<div class="flivo">
+		<div>
+			<h1 style="color:white;" class="font-flivo-section">Flivo Ai studio</h1>
+			<p style="color:#828282;" class="font-flivo-section-para">Welcome to the Enterprise AI Summit Dubai 24! Join
+				us
+				in the vibrant <br /> city
+				of Dubai
+				as we delve
+				into the exciting world
+				of AI in manufacturing.<br /> Discover the untapped $30 trillion market waiting to be explored.<br />
+				Network with industry experts,
+				gain valuable insights, and stay ahead<br /> of the curve in this rapidly evolving sector. Don’t miss
+				out on this<br /> opportunity
+				to be part of a groundbreaking event!</p>
+			<button style="color:white; background-color:transparent; border: 1px solid white; padding: 10px;">Learn
+				More</button>
+		</div>
+		<hr style="color:white;" />
+		<div class="">
+			<div class="datascience-card" style="padding: 40px;">
+				<h2 style="color:white; margin-bottom: 15px;">Data Science</h2>
+				<p style="color:#828282;">Flivo AI uses industry-standard tools, including Jupyter Notebook, R, Python
+					and Scala. 
+					 
+				</p>
+			</div>
+			<div class="datascience-card" style="padding: 40px;">
+				<h2 style="color:white; margin-bottom: 15px;">Data Science</h2>
+				<p style="color:#828282;">Flivo AI uses industry-standard tools, including Jupyter Notebook, R, Python
+					and Scala. 
+					 
+				</p>
+			</div>
+			<div class="datascience-card" style="padding: 40px;">
+				<h2 style="color:white; margin-bottom: 15px;">Data Science</h2>
+				<p style="color:#828282;">Flivo AI uses industry-standard tools, including Jupyter Notebook, R, Python
+					and Scala. 
+					 
+				</p>
+			</div>
+			<div class="datascience-card" style="padding: 40px;">
+				<h2 style="color:white; margin-bottom: 15px;">Data Science</h2>
+				<p style="color:#828282;">Flivo AI uses industry-standard tools, including Jupyter Notebook, R, Python
+					and Scala. 
+					 
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- Flivo Ai studio endes here -->
+	<!-- flivo ai Customers starts here -->
+	<div class="flivo-ai-customer">
+		<div class="text-ai-customer">
+			<h1>Flivo Ai Customer</h1>
+			<p style="color: #828282;">Flivo Ai is a robust Enterprise Ai application development platform with<br /> a
+				growing family of
+				industry-ready Ai-driven Enterprise applications.</p>
+		</div>
+		<div class="flex-ai-image">
+			<img class="image-ai" src="https://kishore2.flivo.ai/wp-content/uploads/2024/05/41.png" alt="" />
+			<img class="image-ai" src="https://kishore2.flivo.ai/wp-content/uploads/2024/05/42.png" alt="" />
+			<img class="image-ai" src="https://kishore2.flivo.ai/wp-content/uploads/2024/05/43.png" alt="" />
+			<img class="image-ai" src="https://tabratrading.com/wp-content/uploads/2023/07/21.png" alt="" />
+			<img class="image-ai" src="https://kishore2.flivo.ai/wp-content/uploads/2024/04/30-1.png" alt="" />
+			<img class="image-ai" src="https://kishore2.flivo.ai/wp-content/uploads/2024/05/31.png" alt="" />
+			<img class="image-ai" src="https://kishore2.flivo.ai/wp-content/uploads/2024/05/32.png" alt="" />
+			<img class="image-ai" src="https://kishore2.flivo.ai/wp-content/uploads/2024/05/33.png" alt="" />
+			<img class="image-ai" src="https://kishore2.flivo.ai/wp-content/uploads/2024/05/34.png" alt="" />
+			<img class="image-ai" src="https://kishore2.flivo.ai/wp-content/uploads/2024/05/35.png" alt="" />
+			<img class="image-ai" src="https://kishore2.flivo.ai/wp-content/uploads/2024/05/39.png" alt="" />
+			<img class="image-ai" src="https://kishore2.flivo.ai/wp-content/uploads/2024/05/40.png" alt="" />
+		</div>
+	</div>
+	<!-- proven results section starts here -->
+
+
+	<!-- flivo ai Customers ends here -->
+
+	<!-- proven results section start -->
+	<section class="proven-result">
+		<div class="prove">
+			<h1>Proven results in weeks,not years</h1>
+			<p>Welcome to the Enterprise AI Summit Dubai 24!Join us in the vibrant city of Dubai as we delve into the
+				exciting world of AI in manufacturing.</p>
+		</div>
+		<div class="cd">
+			<div class="prove-toggle1">
+				<img src="./img/hoverimage.png" alt="hoverimage" style="width: 350px; height: 200px;" />
+				<h3>Get insights into Flivo AI’s capabilities, enterprise AI best practices, and highest-value use
+					cases.</h3>
+			</div>
+			<div class="prove-toggle2">
+				<img src="https://th.bing.com/th/id/OIP.a_NBaDZCwiV6fKa7XJ6B9AHaEK?w=328&h=184&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+					alt="hoverimage" style="width: 350px; height: 200px;" />
+				<h3>Get insights into Flivo AI’s capabilities, enterprise AI best practices, and highest-value use
+					cases.</h3>
+			</div>
+			<div class="prove-toggle3">
+				<img src="https://th.bing.com/th/id/OIP.BWs4LNzdAXaygFAHLRTB_QHaEo?w=286&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+					alt="hoverimage" style="width: 350px; height: 200px;" />
+				<h3>Get insights into Flivo AI’s capabilities, enterprise AI best practices, and highest-value use
+					cases.</h3>
+			</div>
+			<div class="prove-toggle4">
+				<img src="./img/hoverimage.png" alt="hoverimage" style="width: 350px; height: 200px;" />
+				<h3>Get insights into Flivo AI’s capabilities, enterprise AI best practices, and highest-value use
+					cases.</h3>
+			</div>
+		</div>
+		<div class="p-c">
+			<button class="hov-button hov-button1" id="hov-button1">Exec.Briefing 2 Hours</button>
+			<hr>
+			<button class="hov-button hov-button2" id="hov-button2">Technology Assessment 2-3 Days</button>
+			<hr>
+			<button class="hov-button hov-button3" id="hov-button3">Production Trial 8-12 Weeks</button>
+			<hr>
+			<button class="hov-button hov-button4" id="hov-button4">AI Application Deployment in Production 3-6
+				Months.</button>
+		</div>
+
+	</section>
+	<!-- proven results section end -->
+
+	<!-- more information section start -->
+	<section class="more-information">
+		<div>
+			<h1>Want More information?</h1>
+			<h1>Contact Us</h1>
+			<p>
+				Reach out for sales,investor relations, or other enquiries.We're here to assist you.
+			</p>
+		</div>
+		<div>
+			<h1 class="connect">Connect with Our Team <span><svg xmlns="http://www.w3.org/2000/svg" width="36"
+						height="36" fill="currentColor" class="bi bi-arrow-right arrow" viewBox="0 0 16 16">
+						<path fill-rule="evenodd"
+							d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+					</svg></span></h1>
+			<p>Our team will address your inquiry prompltly</p>
+		</div>
+	</section>
+	<!-- more information section end -->
+	<!-- footer section end -->
+	<footer>
+		<div class="links">
+			<div>
+				<h3>AI Software</h3>
+				<h4>Flivo AI Platform</h4>
+				<h4>Flivo AI Application</h4>
+				<h4>Flivo AI CRM</h4>
+			</div>
+			<div>
+				<h3>Flivo AI Platform</h3>
+				<h4>Flivo AI Studio</h4>
+				<h4>Visual Studio Code</h4>
+				<h4>jupyterLab</h4>
+				<h4>Application canvas</h4>
+			</div>
+			<div>
+				<h3>Industries</h3>
+				<h4>Manufacturing</h4>
+				<h4>Financial Services</h4>
+				<h4>Government</h4>
+				<h4>Healthcare</h4>
+			</div>
+			<div>
+				<h3>Customers</h3>
+				<h4>U.S Air Force</h4>
+				<h4>International Oil Company</h4>
+				<h4>Fortune 50 Banking-Securities Lending</h4>
+				<h4>Fortune 50 Banking-Customer Churn</h4>
+			</div>
+			<div>
+				<h3>Other</h3>
+				<h4>Digital Transformation</h4>
+				<h4>Get Started</h4>
+				<h4>Privacy Policy</h4>
+			</div>
+			<div>
+				<h3>Company</h3>
+				<h4>News</h4>
+				<h4>About Flivo.ai</h4>
+				<h4>Resources</h4>
+				<h4>Contact Us</h4>
+			</div>
+
+		</div>
+		<div class="social">
+			<div>
+				<h4>News</h4>
+				<h4>Contact</h4>
+				<h4>Privacy Policy</h4>
+				<h4>Terms of Use</h4>
+				<h4>Sidemap</h4>
+			</div>
+			<h3>© 2024.AI, Inc.All Rights Reserved.</h3>
+		</div>
+	</footer>
+	<!-- footer section end -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script src="js/script.js">
+	</script>
+</body>
+
+</html>
